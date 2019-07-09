@@ -8,10 +8,11 @@ JavaのソースコードはJVMのリモートデバッグでできます。
 実際イントラマートのJSエンジンはRhinoです、Rhino自体はDebuggerが持っています。このツールはそのDebuggerを有効にします。
 
 # 使い方
+1. イントラマートから`js-x.x.x-main.jar`ファイルを`lib`にコピーする
 
-1. `gradlew jar`でコンパイルする
+2. `gradlew jar`でコンパイルする
 
-2. ResinのJVM_ARGSを変更する
+3. ResinのJVM_ARGSを変更する
     ```
     #Javaのリモートデバッグも一緒に設定する
     jvm_args : -javaagent:imartagent.jar -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9009
